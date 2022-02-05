@@ -16,7 +16,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_product")
-public class Poduct implements Serializable{
+public class Product implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
@@ -34,12 +34,12 @@ public class Poduct implements Serializable{
 	private Set<Category> categories = new HashSet<>();
 
 
-	public Poduct() {
+	public Product() {
 		
 	}
 
 
-	public Poduct(Long id, String name, String description, Double price, String imgUrl) {
+	public Product(Long id, String name, String description, Double price, String imgUrl) {
 		
 		this.id = id;
 		this.name = name;
@@ -118,7 +118,7 @@ public class Poduct implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Poduct other = (Poduct) obj;
+		Product other = (Product) obj;
 		return Objects.equals(id, other.id);
 	}
 
